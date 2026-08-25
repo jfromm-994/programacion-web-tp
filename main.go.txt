@@ -8,13 +8,10 @@ import (
 )
 
 func rootHandler(w http.ResponseWriter, r *http.Request) {
-	// Si la ruta solicitada no es exactamente "/", devolvemos error 404
 	if r.URL.Path != "/" {
 		http.NotFound(w, r)
 		return
 	}
-
-	// filepath.Join asegura compatibilidad de rutas tanto en Windows como en Linux
 	filePath := filepath.Join("static", "index.html")
 	content, err := os.ReadFile(filePath)
 	if err != nil {
@@ -22,8 +19,6 @@ func rootHandler(w http.ResponseWriter, r *http.Request) {
 		log.Printf("Error leyendo archivo: %v", err)
 		return
 	}
-
-	// Establecer el Content-Type explícitamente a HTML
 	w.Header().Set("Content-Type", "text/html; charset=utf-8")
 	w.WriteHeader(http.StatusOK)
 	w.Write(content)
@@ -35,8 +30,6 @@ func main() {
 
 	port := ":8080"
 	log.Printf("Servidor escuchando en http://localhost%s\n", port)
-
-	// Iniciar el servidor
 	if err := http.ListenAndServe(port, mux); err != nil {
 		log.Fatalf("Error al iniciar el servidor: %v", err)
 	}
