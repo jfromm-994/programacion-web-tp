@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GameVault - Catálogo de Videojuegos</title>
+</head>
+<body>
+    <h1>GameVault</h1>
+    <p>
+        GameVault es una aplicación web diseñada para gestionar un catálogo personal 
+        de videojuegos. Permite registrar títulos, hacer seguimiento del progreso de juego 
+        (Pendiente, Jugando, Completado), calificar experiencias y clasificar por plataforma.
+    </p>
+
+    <h2>Estructura de Datos (Entidad Juego)</h2>
+    <ul>
+        <li><strong>Título:</strong> Nombre del juego.</li>
+        <li><strong>Plataforma:</strong> PC, PlayStation, Xbox, Switch, etc.</li>
+        <li><strong>Género:</strong> Acción, RPG, Estrategia, etc.</li>
+        <li><strong>Estado:</strong> Pendiente, Jugando, Completado, Abandonado.</li>
+        <li><strong>Puntaje:</strong> Calificación personal del 1 al 10.</li>
+    </ul>
+</body>
+</html>
